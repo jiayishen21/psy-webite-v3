@@ -1,0 +1,458 @@
+:root {
+  --c1: #d4736d;
+  --c2: #335b9b;
+  --c3: #eeeeee;
+  --c4: #0000002a;
+  --c5: #906a9b;
+  --c6: #3f3f3f;
+  --c7: #01061f;
+  --c8: #444444;
+  --navbar-height: 84px;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/Lato-Black.ttf') type('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./fonts/Lato-Regular.ttf') type('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.fly-in {
+  animation-name: a1;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+}
+
+.animate-75 {
+  animation-duration: 0.75s;
+}
+
+.animate-100 {
+  animation-duration: 1s;
+}
+
+@keyframes a1 {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(100% + 3rem));
+  }
+  75% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  padding-left: 10rem;
+  padding-right: 10rem;
+  height: var(--navbar-height);
+  border-bottom: solid #ffffff85 1px;
+}
+
+.bg-c7 {
+  background: var(--c7);
+}
+
+.navbar-links {
+  float: right;
+  display: inline-flex;
+  align-items: center;
+  height: 84px;
+  color: var(--c3);
+}
+
+.navbar-link {
+  margin-right: 2rem;
+}
+
+.navbar-link:link {
+  text-decoration: none;
+  color: var(--c3);
+}
+
+.footer {
+  background: var(--c7);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.footer img {
+  width: 1.5rem;
+  padding-right: 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  width: calc(100vw - 30rem);
+  grid-template-columns: 5fr 3fr;
+}
+
+.footer h4 {
+  font-size: 1.5rem;
+}
+
+.footer a,
+.footer div span div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.footer a:link,
+a:visited {
+  color: var(--c3);
+  text-decoration: none;
+}
+
+.footer-contact {
+  float: right;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.section-home {
+  background: var(--c7);
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heading-main {
+  font-size: 4rem;
+  text-align: center;
+  background: linear-gradient(60deg, var(--c1), var(--c2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.c3 {
+  color: var(--c3);
+}
+
+.c6 {
+  color: var(--c6);
+}
+
+.section-about {
+  padding-top: 10rem;
+  padding-bottom: 7rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.heading-section {
+  font-size: 2.75rem;
+  text-align: center;
+  color: var(--c1);
+  margin-top: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2.25rem;
+}
+
+.card {
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 8px var(--c4);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition: transform 500ms ease;
+  text-decoration: none;
+  color: inherit !important;
+}
+
+.card:hover {
+  /*
+  background: linear-gradient(60deg, var(--c1), var(--c2));
+  */
+  transform: translate(0, -0.5rem);
+}
+
+.card h4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--c5);
+  font-size: 1.5rem;
+
+  transition: color 500ms ease;
+}
+
+.c5 {
+  color: var(--c5);
+}
+
+.card:hover h4 {
+  /* color: var(--c3); */
+}
+
+/*
+
+.section-contact {
+  text-align: center;
+  background: var(--c3);
+  padding-top: 10rem;
+  padding-bottom: 7rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.heading-contact {
+  margin-bottom: 1rem;
+}
+
+*/
+
+.section-mission1 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.heading-mission1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.section-mission2 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  background: white;
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+}
+
+.heading-mission2 {
+  font-size: 2rem;
+}
+
+.para {
+  font-size: 1.075rem;
+  line-height: 1.8rem;
+}
+
+.section-impact {
+  padding-left: 20rem;
+  padding-right: 20rem;
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+  background: var(--c3);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
+}
+
+.card-impact {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+.statistic {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.counter {
+  font-weight: 900;
+  color: var(--c7);
+  font-size: 2.7rem;
+}
+
+.statistic-label {
+  font-size: 1.3rem;
+  color: var(--c5);
+}
+
+/* animations */
+
+@property --num1 {
+  syntax: '<integer>';
+  initial-value: 10;
+  inherits: false;
+}
+.counter1 {
+  animation: counter1 1s ease-in;
+  counter-reset: num1 var(--num1);
+}
+.card-impact .counter1::before {
+  content: counter(num1);
+}
+@keyframes counter1 {
+  from {
+    --num1: 0;
+  }
+  to {
+    --num1: 10;
+  }
+}
+
+@property --num2 {
+  syntax: '<integer>';
+  initial-value: 3;
+  inherits: false;
+}
+.counter2 {
+  animation: counter2 1s ease-in;
+  counter-reset: num2 var(--num2);
+}
+.card-impact .counter2::before {
+  content: counter(num2);
+}
+@keyframes counter2 {
+  from {
+    --num2: 0;
+  }
+  to {
+    --num2: 3;
+  }
+}
+
+@property --num3 {
+  syntax: '<integer>';
+  initial-value: 2200;
+  inherits: false;
+}
+.counter3 {
+  animation: counter3 1s ease-in;
+  counter-reset: num3 var(--num3);
+}
+.card-impact .counter3::before {
+  content: counter(num3);
+}
+@keyframes counter3 {
+  from {
+    --num3: 0;
+  }
+  to {
+    --num3: 2200;
+  }
+}
+
+@property --num4 {
+  syntax: '<integer>';
+  initial-value: 1000;
+  inherits: false;
+}
+.counter4 {
+  animation: counter4 1s ease-in;
+  counter-reset: num4 var(--num4);
+}
+.card-impact .counter4::before {
+  content: '$' counter(num4);
+}
+@keyframes counter4 {
+  from {
+    --num4: 0;
+  }
+  to {
+    --num4: 1000;
+  }
+}
+
+@property --num5 {
+  syntax: '<integer>';
+  initial-value: 400;
+  inherits: false;
+}
+.counter5 {
+  animation: counter5 1s ease-in;
+  counter-reset: num5 var(--num5);
+}
+.card-impact .counter5::before {
+  content: counter(num5);
+}
+@keyframes counter5 {
+  from {
+    --num5: 0;
+  }
+  to {
+    --num5: 400;
+  }
+}
+
+@property --num6 {
+  syntax: '<integer>';
+  initial-value: 10;
+  inherits: false;
+}
+.counter6 {
+  animation: counter6 1s ease-in;
+  counter-reset: num6 var(--num6);
+}
+.card-impact .counter6::before {
+  content: counter(num6);
+}
+@keyframes counter6 {
+  from {
+    --num6: 0;
+  }
+  to {
+    --num6: 10;
+  }
+}
+
+/* end of animations */
+
+.card-impact img {
+  height: 80px;
+}
+
+.section-events {
+  background: var(--c3);
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 6rem;
+  column-gap: 4rem;
+}
+
+.event img {
+  width: 100%;
+  border-radius: 2%;
+}
+
+.event-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--c7);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.event-date {
+  font-size: 1.15rem;
+  color: var(--c8);
+}
