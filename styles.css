@@ -456,3 +456,8 @@ a:visited {
   font-size: 1.15rem;
   color: var(--c8);
 }
+
+.legal-spacing {
+  margin-top: 15px;
+  margin-bottom: 15px !important;
+}
