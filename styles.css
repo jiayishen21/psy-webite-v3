@@ -10,6 +10,7 @@
   --navbar-height: 84px;
 }
 
+/*
 @font-face {
   font-family: 'Lato';
   src: url('./fonts/Lato-Black.ttf') type('truetype');
@@ -23,11 +24,12 @@
   font-weight: 400;
   font-style: normal;
 }
+*/
 
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  /* font-weight: 400; */
 }
 
 .fly-in {
@@ -260,8 +262,8 @@ a:visited {
 }
 
 .section-impact {
-  padding-left: 20rem;
-  padding-right: 20rem;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-bottom: 10rem;
   padding-top: 10rem;
   background: var(--c3);
@@ -431,17 +433,114 @@ a:visited {
   background: var(--c3);
   padding-top: 7rem;
   padding-bottom: 7rem;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding-left: 10%;
+  padding-right: 10%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 6rem;
   column-gap: 4rem;
 }
 
-.event img {
+.mission-img img {
+  width: 80%;
+  border-radius: 2%;
+}
+
+@media (max-width: 1400px) {
+  .section-mission2 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-impact {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-events {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+    margin-right: 8rem;
+    margin-left: 8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards {
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
+
+  .overlay div {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .section-events {
+    grid-template-columns: 1fr;
+  }
+}
+
+.event {
+  width: 100%;
+}
+
+.img-card {
+  position: relative;
   width: 100%;
   border-radius: 2%;
+}
+
+.img-card img {
+  position: block;
+  width: 100%;
+  border-radius: 2%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(15, 15, 15, 0.9);
+  border-radius: 2%;
+}
+
+.overlay div {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+@media (hover: hover) {
+  .img-card:hover .overlay {
+    opacity: 1;
+  }
+
+  .img-card:hover {
+    cursor: pointer;
+  }
+}
+
+@media (hover: none) {
+  .overlay {
+    opacity: 1 !important;
+  }
 }
 
 .event-title {
