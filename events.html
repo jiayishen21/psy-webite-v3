@@ -33,9 +33,9 @@
 
 <div class="section-events">
 	<div class="event">
-		<div class="img-card">
+		<div class="img-card" onclick="changeVisible(1)">
 			<img src="./assets/event1.png" />
-			<div class="overlay">
+			<div class="overlay" id="1">
 				<div>
 					Passionfruit Youth hosted a Toronto Zoo Minecraft Event in support of your Toronto Zoo. Registrants participated in a Minecraft animal build competition and four workshops over the span of a week.
 				</div>
@@ -46,9 +46,9 @@
 	</div>
 
 	<div class="event">
-		<div class="img-card">
+		<div class="img-card" onclick="changeVisible(2)">
 			<img src="./assets/event2.png" />
-			<div class="overlay">
+			<div class="overlay" id="2">
 				<div>
 					During Pitch a Passion participants got the opportunity to develop and propose business ideas to a board of judges. This event included a workshop to guide participants with little business experience.
 				</div>
@@ -59,9 +59,9 @@
 	</div>
 
 	<div class="event">
-		<div class="img-card">
+		<div class="img-card" onclick="changeVisible(3)">
 			<img src="./assets/event3.png" />
-			<div class="overlay">
+			<div class="overlay" id="3">
 				<div>
 					Pathway to Your Passion was an event tailored to students unsure about their future career path and students interested in broadening their understanding of career options. This event had workshops hosted by career coaches and professionals in certain career fields.
 				</div>
@@ -72,9 +72,9 @@
 	</div>
 
 	<div class="event">
-		<div class="img-card">
+		<div class="img-card" onclick="changeVisible(4)">
 			<img src="./assets/event4.png" />
-			<div class="overlay">
+			<div class="overlay" id="4">
 				<div>
 					The PassionFruit Youth x University Health Network Charity Weekend helped participants develop a thorough understanding typical lifestyles of healthcare workers. The event also provided research opportunities for students interested in medicine.
 				</div>
@@ -116,6 +116,16 @@
 	<a class="legal-spacing" target="_blank" href="https://opengovca.com/corporation/12827344">Coporation information</a>
 </div>
 
+<script>
+function changeVisible(number) {
+	if(document.getElementById(`${number}`).classList.contains('visible')) {
+		document.getElementById(`${number}`).classList.remove('visible');
+	}
+	else {
+		document.getElementById(`${number}`).classList.add('visible');
+	}
+}
+</script>
 
 </body>
 </html>

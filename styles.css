@@ -482,6 +482,10 @@ a:visited {
   .section-events {
     grid-template-columns: 1fr;
   }
+
+  .overlay div {
+    font-size: 20px !important;
+  }
 }
 
 .event {
@@ -538,7 +542,13 @@ a:visited {
 }
 
 @media (hover: none) {
+  /*
   .overlay {
+    opacity: 1 !important;
+  }
+  */
+
+  .visible {
     opacity: 1 !important;
   }
 }
