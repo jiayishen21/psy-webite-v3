@@ -92,8 +92,8 @@ body {
   background: var(--c7);
   padding-top: 3rem;
   padding-bottom: 3rem;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .footer img {
@@ -103,7 +103,7 @@ body {
 
 .footer-grid {
   display: grid;
-  width: calc(100vw - 30rem);
+  width: calc(100vw - 30%);
   grid-template-columns: 5fr 3fr;
 }
 
@@ -476,6 +476,10 @@ a:visited {
   .overlay div {
     font-size: 1rem !important;
   }
+
+  .navbar a img {
+    display: none;
+  }
 }
 
 @media (max-width: 750px) {
@@ -485,6 +489,43 @@ a:visited {
 
   .overlay div {
     font-size: 20px !important;
+  }
+
+  .navbar {
+    padding-left: 0rem;
+    padding-right: 3.5rem;
+  }
+
+  .section-mission2 {
+    padding-right: 0;
+    padding-left: 15%;
+  }
+
+  .section-impact {
+    grid-template-columns: 1fr;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-about {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .heading-main {
+    font-size: 3rem;
+  }
+
+  .navbar {
+    padding: 0;
   }
 }
 
